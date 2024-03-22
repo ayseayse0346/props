@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+
+// default exportun importu, istediğimiz isimle import edebiliriz.
+import Cat from './components/Cat';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+   <Cat 
+   name = "Cenitin"
+   img= "https://cdn.pixabay.com/photo/2014/11/30/14/11/cat-551554_1280.jpg"
+   color = "yellow"
+
+   />
+   <Cat/>
+   <Cat/>
     </div>
   );
 }
