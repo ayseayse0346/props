@@ -4,13 +4,14 @@
 // named exportun importu,süslü içinde ve aynı isimle import edilmeli.
 import { Name } from "./Name";
 // ? havadadest.ederek yaparız .
-const Cat = ({name,img,color}) => {
+const Cat = ({name,img,color, isBlueEyes}) => {
   // ?destructiring
   // const {name,img,color} = props;
   return (
     // jsx ifadeleri birden fazla ise mutlaka bir parent ile sarmalanmalıdır.
     <div>
         <Name name = {name}/>
+        <p>Blu eyes? : {isBlueEyes ? "yes": "No"}</p>
         <img
         src={img}
         alt="cat-img"
