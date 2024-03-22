@@ -1,10 +1,10 @@
 
 
 
-export function Name  () {
+export function Name  (name) {
   return (
     <div>
-        <h2>Name:Cenitin</h2>
+        <h2>{name}</h2>
     </div>
   )
 }
