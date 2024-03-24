@@ -1,48 +1,26 @@
-// react importu artık zorunlu değil
-// import React from 'react'
-// ?componentler funct.dec. veya arrow func ile oluşturulabilir.
-// named exportun importu,süslü içinde ve aynı isimle import edilmeli.
+//* React importu artık zorunlu değil
+// import React from "react";
+
+//? named exportun importu, süslü içinde ve aynı isimle import edilmeli
 import { Name } from "./Name";
-// ? havadadest.ederek yaparız .
-const Cat = ({name,img,color, isBlueEyes}) => {
-  // ?destructiring
-  // const {name,img,color} = props;
+
+//? componentler function dec. veya arrow func. ile oluşturulabilir
+const Cat = ({ name, img, color = "grey", isBlueEyed }) => {
+  //? destr.
+  //   const { name, img, color } = props;
+  console.log(isBlueEyed);
   return (
-    // jsx ifadeleri birden fazla ise mutlaka bir parent ile sarmalanmalıdır.
+    //* JSX ifadeleri birden fazla ise mutlaka bir parent ile sarmalanmalıdır
     <div>
-        <Name name = {name}/>
-        <p>Blu eyes? : {isBlueEyes ? "yes": "No"}</p>
-        <img
-        src={img}
-        alt="cat-img"
-        height="400px"
-
-        />
-        <p style={{backgroundColor: color}}>color : {color}</p>
-        <hr />
+      <Name name={name} />
+      {/* //* JSX içinde if/else kullanılamaz, ternary kullanılabilir */}
+      <p>Blue eyed? : {isBlueEyed ? "Yes" : "No"} </p>
+      <img src={img} alt="cat-img" height="300px" />
+      <p style={{ backgroundColor: color }}>Color: {color} </p>
+      <hr />
     </div>
-
   );
 };
 
 export default Cat;
 
-// const Cat = (props) => {
-//   return (
-//     // jsx ifadeleri birden fazla ise mutlaka bir parent ile sarmalanmalıdır.
-//     <div>
-//         <Name/>
-//         <img
-//         src={props.img}
-//         alt="cat-img"
-//         height="400px"
-
-//         />
-//         <p style={{backgroundColor: props.color}}>color : {props.color}</p>
-//         <hr />
-//     </div>
-
-//   );
-// };
-
-// export default Cat;

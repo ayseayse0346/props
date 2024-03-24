@@ -1,14 +1,14 @@
 
 
 
-export function Name  (name) {
+export function Name  ({name}) {
   return (
     <div>
-        <h2>{name}</h2>
+        <h2>Name:{name}</h2>
     </div>
-  )
+  );
 }
 
-export default Name
+
 
 
